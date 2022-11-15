@@ -1,0 +1,12 @@
+<h1>Show page</h1>
+
+ <div>
+    <h2><%= @task.title %></h2>
+    <h4><%= @task.details %></h4>
+</div>
+
+<h3><%= link_to "Back to list", tasks_path %></h3>
+
+<h3><%= link_to "Edit task", edit_task_path(@task) %></h3>
+
+<h3><%= link_to "Delete task", delete_task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h3>
